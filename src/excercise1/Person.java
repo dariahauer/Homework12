@@ -6,7 +6,7 @@ public class Person {
     private  int age;
     private int pesel;
 
-    public Person(String firstName, String lastName, int age, int pesel) {
+    public Person(String firstName, String lastName, int age, int pesel) throws NameUndefinedException, IncorrectAgeException {
         checkPreconditions(firstName,lastName,age);
         this.firstName = firstName;
         this.lastName = lastName;
@@ -14,7 +14,7 @@ public class Person {
         this.pesel = pesel;
     }
 
-    private void checkPreconditions(String firstName, String lastName, int age) {
+    private void checkPreconditions(String firstName, String lastName, int age) throws NameUndefinedException, IncorrectAgeException {
         if (firstName == null)
             throw new NameUndefinedException();
         if(lastName==null) {
