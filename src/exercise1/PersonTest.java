@@ -16,6 +16,7 @@ public class PersonTest {
             int pesel = input.nextInt();
             Person person = new Person(firstName, lastName, age, pesel);
             System.out.println(person);
+            input.close();
         } catch (NameUndefinedException | IncorrectAgeException ex) {
             System.out.println(ex.getMessage());
         }
