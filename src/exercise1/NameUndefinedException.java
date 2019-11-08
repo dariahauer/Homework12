@@ -1,4 +1,4 @@
-package excercise1;
+package exercise1;
 
 public class NameUndefinedException extends Exception {
     public NameUndefinedException() {

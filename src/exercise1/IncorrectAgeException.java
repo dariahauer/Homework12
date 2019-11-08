@@ -1,4 +1,4 @@
-package excercise1;
+package exercise1;
 
 public class IncorrectAgeException extends Exception {
     public IncorrectAgeException(){
