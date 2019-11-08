@@ -15,16 +15,10 @@ public class Person {
     }
 
     private void checkPreconditions(String firstName, String lastName, int age) throws NameUndefinedException, IncorrectAgeException {
-        if (firstName == null)
+        if (firstName == null||lastName==null)
             throw new NameUndefinedException();
-        if(lastName==null) {
+        if (firstName.length()<=2 || lastName.length()<=2){
             throw new NameUndefinedException();
-        }
-        if (firstName.length()<=2){
-            throw new NameUndefinedException();
-
-        } if (lastName.length()<=2){
-            throw  new NameUndefinedException();
         } if (age<1){
             throw new  IncorrectAgeException();
         }
