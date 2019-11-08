@@ -17,8 +17,7 @@ public class Ram extends Product {
         this.speed = speed;
         this.temperature = temperature;
     }
-
-    public void
+    
 
 
 //    public void  increaseSpeed(){

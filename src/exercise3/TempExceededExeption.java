@@ -1,5 +1,8 @@
 package exercise3;
 
 public class TempExceededExeption extends RuntimeException {
-    public TempExceededExeption("")
+    public TempExceededExeption() {
+        super ("The temperature has reached the limit");
+
+    }
 }
