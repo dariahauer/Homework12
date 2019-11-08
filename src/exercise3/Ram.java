@@ -17,24 +17,17 @@ public class Ram extends Product {
         this.speed = speed;
         this.temperature = temperature;
     }
-    
 
-
-//    public void  increaseSpeed(){
-//        if(speed + SPEED_CHANGE> SPEED_LIMIT){
-//            throw  new  SpeedExceededExeption();
-//            //  throw  new  IllegalArgumentException("Przekroczono limit prędkości");
-//        }
-//        speed+=SPEED_CHANGE;
-//    }
-//
-//    public void  decreaseSpeed(){
-//        if (speed-SPEED_CHANGE<0){
-//            speed=0;
-//        }else {
-//            speed-=SPEED_CHANGE;
-//        }
-//    }
+    public void speedIncrease(int speedChangeValue) {
+        int speedChangeParameter = 100;
+        int tempValpar = (((speedChangeValue) / speedChangeParameter) * TEMP_CHANGE);
+        if (tempValpar + temperature >= MAX_TEMP) {
+            throw new TempExceededExeption();
+        } else {
+            speed += speedChangeValue;
+            temperature += tempValpar;
+        }
+    }
 
     public int getMemory() {
         return memory;
@@ -44,21 +37,6 @@ public class Ram extends Product {
         this.memory = memory;
     }
 
-    public int getSpeed() {
-        return speed;
-    }
-
-    public void setSpeed(int speed) {
-        this.speed = speed;
-    }
-
-    public int getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
-    }
 
     @Override
     public String toString() {

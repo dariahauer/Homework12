@@ -1,6 +1,6 @@
 package exercise3;
 
-public class HardDisc extends Product{
+public class HardDisc extends Product {
     private int capacity;
 
     public HardDisc(String producerName, String modelName, int serialNumber) {
@@ -26,4 +26,7 @@ public class HardDisc extends Product{
                 "capacity=" + capacity +
                 '}';
     }
+
 }
+
+
